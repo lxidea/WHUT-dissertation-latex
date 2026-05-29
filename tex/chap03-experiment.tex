@@ -1,0 +1,51 @@
+%%==============================================================================
+%% 第 3 章 实验与结果分析
+%%==============================================================================
+\chapter{实验与结果分析}\label{chap:experiment}
+
+\section{实验设置}
+实验在搭建的人机协作平台上进行，对比了本文方法与两种基线方法的性能。实验
+主要参数如表~\ref{tab:params} 所示。
+
+\begin{table}[htbp]
+  \centering
+  \caption{实验主要参数设置}
+  \label{tab:params}
+  \begin{tabular}{lcc}
+    \toprule
+    参数 & 符号 & 取值 \\
+    \midrule
+    学习率      & $\alpha$  & $3\times10^{-4}$ \\
+    折扣因子    & $\gamma$  & $0.99$ \\
+    经验回放容量 & $N$       & $10^{5}$ \\
+    安全阈值    & $d_{s}$   & $0.2$ m \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{结果分析}
+不同方法的任务完成时间对比如表~\ref{tab:results} 所示。可以看出，本文方法在
+任务完成时间上较基线方法有明显降低。
+
+\begin{table}[htbp]
+  \centering
+  \caption{不同方法性能对比}
+  \label{tab:results}
+  \begin{tabular}{lccc}
+    \toprule
+    \multirow{2}{*}{方法} & 完成时间 & 碰撞次数 & 成功率 \\
+                          & (s)      & (次)     & (\%)   \\
+    \midrule
+    基线 A      & $42.3$ & $5$ & $86.0$ \\
+    基线 B      & $38.7$ & $3$ & $91.5$ \\
+    本文方法    & $\mathbf{31.5}$ & $\mathbf{0}$ & $\mathbf{98.2}$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+由定理~\ref{thm:converge} 可知，所提算法在训练过程中能够稳定收敛，这与图中
+所示的实验现象一致。
+
+\section{本章小结}
+本章在人机协作平台上验证了所提方法的有效性，实验结果表明本文方法在效率与
+安全性方面均优于对比方法。

@@ -1,0 +1,1 @@
+v2.1.8 (2025-06-22), 源自 https://github.com/zepinglee/gbt7714-bibtex-style/releases/tag/v2.1.8

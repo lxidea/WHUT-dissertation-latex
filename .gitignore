@@ -1,0 +1,41 @@
+# LaTeX 中间文件
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.xdv
+*.synctex.gz
+*.run.xml
+*.nav
+*.snm
+*.vrb
+tex/*.aux
+
+# 编译产物（如需提交 PDF 可注释掉下面两行）
+main-2024.pdf
+main-2025-newform.pdf
+
+# 知网参考样例论文（仅供格式参考，体积大且涉版权，不纳入版本管理）
+samples/
+
+# 编辑器 / 系统
+.DS_Store
+*.swp
+.vscode/
+.claude/
+
+# 官方 docx 提取的中间文本（可由 docx 重新生成）
+official-format/*.txt
+
+# 注意：不要忽略随仓库分发的宏包文件
+!gbt7714.sty
+!gbt7714-numerical.bst
+!gbt7714-author-year.bst
+!multirow.sty
+!figures/example-figure.pdf

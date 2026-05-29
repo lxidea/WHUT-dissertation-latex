@@ -1,0 +1,20 @@
+% 示例插图源文件：可用 xelatex 编译为 example-figure.pdf
+% 也可直接把自己的图片（pdf/png/jpg）放入 figures/ 并在正文 \includegraphics。
+\documentclass[tikz,border=6pt]{standalone}
+\usepackage{ctex}
+\usetikzlibrary{arrows.meta,positioning}
+\begin{document}
+\begin{tikzpicture}[
+    node distance=10mm,
+    box/.style={draw,rounded corners,minimum width=24mm,minimum height=10mm,align=center},
+    >={Stealth[]}]
+  \node[box] (per) {感知模块};
+  \node[box,right=of per] (dec) {决策模块};
+  \node[box,right=of dec] (act) {执行模块};
+  \node[box,below=12mm of dec] (env) {人机协作环境};
+  \draw[->] (per) -- (dec);
+  \draw[->] (dec) -- (act);
+  \draw[->] (act) |- (env);
+  \draw[->] (env) -| (per);
+\end{tikzpicture}
+\end{document}

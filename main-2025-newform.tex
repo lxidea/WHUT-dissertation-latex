@@ -1,0 +1,44 @@
+%%==============================================================================
+%% 武汉理工大学学位论文 —— 主文件【2025 版·专业学位研究生新形式硕士】
+%%
+%% 文档类选项 [newform] 即“专业学位研究生新形式硕士”：
+%%   封面为“专业学位研究生新形式硕士学位论文”，含专业学位类别 / 专业领域 /
+%%   论文形式 / 副指导教师 等字段。
+%%   可叠加 [anonymous] 盲审、[fontset=mac]、[twoside] 等。
+%%
+%% 注：2025 新形式与 2024 版的排版格式完全相同，仅封面/字段措辞不同。
+%%
+%% 编译：latexmk -xelatex main-2025-newform.tex   或   make V=2025
+%%==============================================================================
+\documentclass[newform]{whut-thesis}
+
+\input{tex/info-newform}    % 论文元信息（专业学位字段）
+
+\begin{document}
+
+%% ---------------- 前置 ----------------
+\makecover
+\maketitlepage
+\makedeclaration
+
+\frontmatter
+\input{tex/abstract}
+\tableofcontents
+
+%% ---------------- 正文 ----------------
+\mainmatter
+\input{tex/chap01-intro}
+\input{tex/chap02-method}
+\input{tex/chap03-experiment}
+\input{tex/chap04-conclusion}
+
+%% ---------------- 后置（官方顺序：致谢→参考文献→科研成果目录→附录）----------------
+\input{tex/acknowledgement}      % 致谢
+
+\bibliography{ref}               % 参考文献（GB/T 7714-2015）
+
+\input{tex/publications}         % 科研成果目录
+
+\input{tex/appendix}             % 附录（如无可删去此行）
+
+\end{document}

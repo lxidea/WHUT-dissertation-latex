@@ -1,0 +1,44 @@
+%%==============================================================================
+%% 武汉理工大学学位论文 —— 主文件【2024 版·学术学位 / 专业硕士】
+%%
+%% 学位类型用文档类选项切换：
+%%   [doctor]               博士（学术学位）
+%%   [master]               硕士（学术学位，默认）
+%%   [master,professional]  专业硕士（2024 版）
+%%   再可叠加 [anonymous] 盲审、[fontset=mac] 切系统字体、[twoside] 双面
+%%
+%% 编译：latexmk -xelatex main-2024.tex   或   make V=2024
+%%   手动：xelatex → bibtex → xelatex → xelatex
+%%==============================================================================
+\documentclass[doctor]{whut-thesis}
+
+\input{tex/info}        % 论文元信息
+
+\begin{document}
+
+%% ---------------- 前置 ----------------
+\makecover
+\maketitlepage
+\makedeclaration
+
+\frontmatter
+\input{tex/abstract}
+\tableofcontents
+
+%% ---------------- 正文 ----------------
+\mainmatter
+\input{tex/chap01-intro}
+\input{tex/chap02-method}
+\input{tex/chap03-experiment}
+\input{tex/chap04-conclusion}
+
+%% ---------------- 后置（官方顺序：致谢→参考文献→科研成果目录→附录）----------------
+\input{tex/acknowledgement}      % 致谢
+
+\bibliography{ref}               % 参考文献（GB/T 7714-2015）
+
+\input{tex/publications}         % 科研成果目录
+
+\input{tex/appendix}             % 附录（如无可删去此行）
+
+\end{document}
