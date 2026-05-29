@@ -1,0 +1,37 @@
+%%==============================================================================
+%% 武汉理工大学本科生毕业设计（论文）—— 主文件
+%%
+%% 选项：[design] 毕业设计 / 默认毕业论文；[fontset=mac] 切换中文字体
+%% 编译：latexmk -xelatex main-bachelor.tex   或   make bachelor
+%%   手动：xelatex → bibtex → xelatex → xelatex
+%%
+%% 装订顺序（官方）：封面→原创声明→中文摘要→英文摘要→目录→正文
+%%                  →参考文献→附录→致谢
+%%==============================================================================
+\documentclass{whut-bachelor}
+
+\input{tex/info-bachelor}
+
+\begin{document}
+
+%% ---------------- 前置 ----------------
+\makecover
+\makedeclaration
+
+\frontmatter            % 摘要、目录用罗马数字页码
+\input{tex/abstract}    % 中文摘要 + 英文摘要
+\tableofcontents
+
+%% ---------------- 正文 ----------------
+\mainmatter             % 正文从第1章起用阿拉伯数字页码
+\input{tex/chap01-intro}
+\input{tex/chap02-method}
+\input{tex/chap03-experiment}
+\input{tex/chap04-conclusion}
+
+%% ---------------- 后置（参考文献 → 附录 → 致谢）----------------
+\bibliography{ref}
+\input{tex/appendix}
+\input{tex/acknowledgement}
+
+\end{document}

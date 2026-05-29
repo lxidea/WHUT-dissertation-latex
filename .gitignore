@@ -17,9 +17,10 @@
 *.vrb
 tex/*.aux
 
-# 编译产物（如需提交 PDF 可注释掉下面两行）
+# 编译产物（如需提交 PDF 可注释掉下面几行）
 main-2024.pdf
 main-2025-newform.pdf
+main-bachelor.pdf
 
 # 知网参考样例论文（仅供格式参考，体积大且涉版权，不纳入版本管理）
 samples/

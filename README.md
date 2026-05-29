@@ -1,10 +1,14 @@
-# 武汉理工大学研究生学位论文 LaTeX 模板
+# 武汉理工大学学位论文 LaTeX 模板（研究生 + 本科生）
 
-> Wuhan University of Technology (WHUT) Graduate Thesis Template
+> Wuhan University of Technology (WHUT) Thesis Templates
 >
-> 非官方模板，供武汉理工大学研究生撰写学位论文使用。基于 `ctexbook` 与 XeLaTeX，
-> 开箱即用。版式依据**官方《武汉理工大学学位论文（印刷）参考格式（2024/2025 版）》**
-> 校准，参考文献遵循 **GB/T 7714—2015** 数字制。
+> 非官方模板，基于 `ctexbook` 与 XeLaTeX，开箱即用。包含：
+> - **研究生学位论文**（`whut-thesis.cls`）：2024/2025 双版本，依官方《学位论文（印刷）
+>   参考格式（2024/2025）》校准。
+> - **本科生毕业设计（论文）**（`whut-bachelor.cls`）：依官方《本科生毕业设计（论文）
+>   撰写规范和示例》校准。
+>
+> 两者共用内置的 GB/T 7714 参考文献宏包，参考文献遵循 **GB/T 7714** 数字制。
 
 ---
 
@@ -47,9 +51,10 @@
 
 ```bash
 # 用 make（推荐）
-make            # 编译 2024 版 -> main-2024.pdf
-make V=2025     # 编译 2025 新形式版 -> main-2025-newform.pdf
-make both       # 两个版本都编译
+make            # 研究生 2024 版 -> main-2024.pdf
+make V=2025     # 研究生 2025 新形式版 -> main-2025-newform.pdf
+make both       # 两个研究生版本都编译
+make bachelor   # 本科毕业设计（论文）-> main-bachelor.pdf
 make clean      # 清理中间文件
 
 # 或用 latexmk
@@ -176,6 +181,24 @@ A：在 `whut-thesis.cls` 的「页面与行距」一节调整 `\geometry{...}` 
 A：见 `whut-thesis.cls` 中「标题层次格式」与 `\captionsetup`。
 
 ---
+
+## 七·五、本科生毕业设计（论文）模板
+
+本科模板为独立文档类 `whut-bachelor.cls`，主文件 `main-bachelor.tex`，与研究生模板
+共用 `tex/` 章节、`ref.bib` 与内置宏包。
+
+```bash
+make bachelor          # 编译 -> main-bachelor.pdf
+# 或 latexmk -xelatex main-bachelor.tex
+```
+
+- 选项：`\documentclass[design]{whut-bachelor}`（毕业设计）/ 默认毕业论文；
+  `[fontset=mac]` 切换字体。
+- 信息在 `tex/info-bachelor.tex` 填写（题目、学院、专业班级、姓名、指导教师、日期）。
+- 与研究生模板的主要差异（依官方规范）：封面「武汉理工大学毕业设计（论文）」+ 题目
+  + 学院/专业班级/姓名/指导教师；页边距上2.5/下2/左2.5/右2cm（左装订）；章节用
+  **阿拉伯数字「第1章」**；图表公式用**点号**（图 3.1、表 3.1、式 (3.2)）；原创性声明
+  为本科措辞（含保密/不保密勾选）；后置顺序 **参考文献 → 附录 → 致谢**。
 
 ## 八、关于格式依据与免责声明
 
