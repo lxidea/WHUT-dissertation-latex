@@ -223,3 +223,19 @@ make bachelor          # 编译 -> main-bachelor.pdf
   `styles/` 说明）。
 - **官方素材**：`figures/武汉理工大学.png`（校名字标）、`official-format/` 下的官方
   参考格式文档版权归武汉理工大学所有，此处仅作格式对照之用，不在本仓库许可范围内。
+
+## 十、相关项目与致谢
+
+武汉理工大学还有其他优秀的社区 LaTeX 模板，特此致谢并供同学对比选择：
+
+- **[Jiayin-Gu/WUTthesis](https://github.com/Jiayin-Gu/WUTthesis)** —— 研究生学位论文模板。
+  作者顾加银（理学院）。基于 `ctexbook`，以独立 `WUTthesis.sty` 封装，参考文献用
+  `biblatex + biber`（gb7714-2015 样式），自带华文中宋字体（`STZhongsong.ttf`）与校徽，
+  依据《2009 年统一要求》制作，含英文封面页。本仓库研究生模板的部分实现细节参考了它。
+- **[tsaoyu/WHUT-LaTeX-bachelor](https://github.com/tsaoyu/WHUT-LaTeX-bachelor)** ——
+  本科生毕业论文模板。XeLaTeX + GB/T 7714（bibtex），结构按 `body/` 分章组织，
+  还附带**开题报告（Research Proposal）**模板，推荐配合 VS Code + LaTeX Workshop 使用。
+
+> 与上述项目相比，本仓库的特点：**研究生 + 本科生一站式**；版式按**最新官方
+> 2024/2025 参考格式**实测校准；参考文献用 `gbt7714 + bibtex`（无需 biber）；
+> 内置宏包使 **TeX Live basic 精简版亦可直接编译**。
