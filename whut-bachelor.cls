@@ -233,6 +233,21 @@
 %%   后置顺序：参考文献 → 附录 → 致谢
 %%------------------------------------------------------------------------------
 \renewcommand{\contentsname}{目\hspace{1em}录}
+% 目录行距统一：去掉 book 类章级条目前的额外段前距，章级也用点线引导，
+% 使各级条目保持相同的行间距。
+\renewcommand*\l@chapter[2]{%
+  \ifnum \c@tocdepth >\m@ne
+    \begingroup
+      \setlength\@tempdima{4.0em}%        容纳“第1章”等章号
+      \parindent\z@ \rightskip\@pnumwidth
+      \parfillskip-\@pnumwidth
+      \leavevmode\heiti
+      \advance\leftskip\@tempdima \hskip-\leftskip
+      #1\nobreak
+      \leaders\hbox{$\m@th\mkern\@dotsep mu\hbox{.}\mkern\@dotsep mu$}\hfill
+      \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+    \endgroup
+  \fi}
 % 参考文献：标题黑体小二，内容五号
 \renewcommand{\bibname}{参考文献}
 \renewcommand{\bibfont}{\zihao{5}}
