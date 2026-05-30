@@ -16,7 +16,8 @@
 %%   \documentclass[master,fontset=windows]{whut-thesis}
 %%   \documentclass[master,anonymous]{whut-thesis}  % 盲审：隐藏作者/导师信息
 %%
-%% 许可：本模板代码以 LPPL v1.3c 发布；gbt7714 宏包版权归原作者所有。
+%% 许可：本模板原创代码以 Apache License 2.0 发布（见仓库 LICENSE）；
+%%       随附的 gbt7714、multirow 宏包仍遵循其各自的 LPPL 许可，版权归原作者。
 %%==============================================================================
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{whut-thesis}[2026/05/29 v1.0 WHUT Graduate Thesis Template]

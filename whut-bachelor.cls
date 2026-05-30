@@ -6,6 +6,8 @@
 %% 依据：《武汉理工大学本科生毕业设计（论文）撰写规范和示例》
 %% 引擎：XeLaTeX（推荐）
 %% 参考文献：GB/T 7714（内置 gbt7714 v2.1.8，与研究生模板共用）
+%% 许可：本模板原创代码以 Apache License 2.0 发布（见仓库 LICENSE）；
+%%       随附的 gbt7714、multirow 宏包仍遵循其各自的 LPPL 许可。
 %%
 %% 用法：
 %%   \documentclass{whut-bachelor}                 % 默认（毕业论文）

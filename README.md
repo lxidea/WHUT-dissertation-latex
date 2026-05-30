@@ -216,6 +216,10 @@ make bachelor          # 编译 -> main-bachelor.pdf
 
 ## 九、许可
 
-- 模板代码（`whut-thesis.cls` 等）以 **LPPL v1.3c** 发布。
-- 内置的 `gbt7714`、`multirow` 宏包版权归各自原作者所有，仅为方便编译而随附分发，
-  其许可见 `styles/` 目录与各文件头部。
+- 本仓库**原创代码**（`whut-thesis.cls`、`whut-bachelor.cls`、主文件、`tex/` 示例等）
+  以 **Apache License 2.0** 发布，完整条款见仓库根目录 [`LICENSE`](LICENSE)。
+- **随附的第三方宏包**仅为方便编译而分发，版权归各自原作者，**仍遵循其原有许可**：
+  `gbt7714.sty` / `gbt7714-*.bst`、`multirow.sty` 均为 **LPPL**（见各文件头部与
+  `styles/` 说明）。
+- **官方素材**：`figures/武汉理工大学.png`（校名字标）、`official-format/` 下的官方
+  参考格式文档版权归武汉理工大学所有，此处仅作格式对照之用，不在本仓库许可范围内。
